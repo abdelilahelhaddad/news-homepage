@@ -13,11 +13,25 @@
 
     <title>News homepage</title>
   </head>
-  <body class="font-inter">
+  <body class="font-inter px-3 ss:px-0">
     <header class="container mx-auto flex justify-between mt-8">
       <a href="#"><img src="./images/logo.svg" alt="Logo" /></a>
       <nav>
-        <ul class="flex">
+        <div id="mobileMenu" class="ss:hidden">
+          <img
+            id="openMenu"
+            class="block"
+            src="./images/icon-menu.svg"
+            alt=""
+          />
+          <img
+            id="closeMenu"
+            class="hidden"
+            src="./images/icon-menu-close.svg"
+            alt=""
+          />
+        </div>
+        <ul class="hidden ss:flex">
           <li class="mr-9 text-darkBlue hover:text-softRed">
             <a href="#">Home</a>
           </li>
@@ -37,15 +51,22 @@
       </nav>
     </header>
     <main
-      class="self-start container mx-auto mt-10 grid grid-cols-3 grid-rows-auto gap-8"
+      class="ss:self-start container mx-auto mt-10 ss:grid ss:grid-cols-3 ss:grid-rows-auto ss:gap-8"
     >
       <img
-        class="h-auto max-w-full col-start-1 col-end-3 row-start-1 row-end-2"
+        class="hidden ss:block h-auto max-w-full ss:col-start-1 ss:col-end-3 ss:row-start-1 ss:row-end-2"
         src="./images/image-web-3-desktop.jpg"
         alt=""
       />
-      <div class="col-start-1 col-end-3 row-start-2 row-end-3 flex">
-        <h1 class="font-extrabold text-5xl mr-20 text-veryDarkBlue">
+      <img
+        class="block ss:hidden h-auto max-w-full col-start-1 col-end-3 row-start-1 row-end-2"
+        src="./images/image-web-3-mobile.jpg"
+        alt=""
+      />
+      <div
+        class="col-start-1 col-end-3 row-start-2 row-end-3 flex flex-col ss:flex-row"
+      >
+        <h1 class="font-extrabold text-5xl ss:mr-20 text-veryDarkBlue">
           The Bright Future of Web 3.0?
         </h1>
         <div>
@@ -66,27 +87,36 @@
       >
         <h2 class="text-4xl font-extrabold text-softOrange">New</h2>
         <div class="divide-y divide-darkBlue">
-          <div>
-            <h3 class="pt-7 pb-2 text-xl font-bold text-offWhite">
+          <div class="pt-7">
+            <a
+              href="#"
+              class="pb-2 text-xl font-bold text-offWhite hover:text-softOrange"
+            >
               Hydrogen VS Electric Cars
-            </h3>
+            </a>
             <p class="pb-7 text-grayishBlue leading-7">
               Will hydrogen-fueled cars ever catch up to EVs?
             </p>
           </div>
-          <div>
-            <h3 class="pt-7 pb-2 text-xl font-bold text-offWhite">
+          <div class="pt-7">
+            <a
+              href="#"
+              class="pb-2 text-xl font-bold text-offWhite hover:text-softOrange"
+            >
               The Downsides of AI Artistry
-            </h3>
+            </a>
             <p class="pb-7 text-grayishBlue leading-7">
               What are the possible adverse effects of on-demand AI image
               generation?
             </p>
           </div>
-          <div>
-            <h3 class="pt-7 pb-2 text-xl font-bold text-offWhite">
+          <div class="pt-7">
+            <a
+              href="#"
+              class="pb-2 text-xl font-bold text-offWhite hover:text-softOrange"
+            >
               Is VC Funding Drying Up?
-            </h3>
+            </a>
             <p class="text-grayishBlue leading-7">
               Private funding by VC firms is down 50% YOY. We take a look at
               what that means.
@@ -95,18 +125,18 @@
         </div>
       </div>
     </main>
-    <section class="container mt-14 mx-auto flex justify-between">
-      <div class="flex">
+    <section class="container mt-14 mx-auto ss:flex ss:justify-between">
+      <div class="flex gap-3">
         <img
           class="w-28"
           src="./images/image-retro-pcs.jpg"
           alt="Reviving Retro PCs Image"
         />
         <div class="self-center pl-3 pr-5">
-          <h3 class="text-grayishBlue text-3xl font-bold">01</h3>
+          <h3 class="text-grayishBlue text-3xl font-bold mb-3">01</h3>
           <a
             href="#"
-            class="text-veryDarkBlue hover:text-softRed text-lg font-extrabold mt-4"
+            class="text-veryDarkBlue hover:text-softRed text-lg font-extrabold"
           >
             Reviving Retro PCs
           </a>
@@ -115,17 +145,17 @@
           </p>
         </div>
       </div>
-      <div class="flex">
+      <div class="flex gap-3">
         <img
           class="w-28"
           src="./images/image-top-laptops.jpg"
           alt="Top 10 Laptops of 2022 Image"
         />
         <div class="self-center pl-3 pr-5">
-          <h3 class="text-grayishBlue text-3xl font-bold">02</h3>
+          <h3 class="text-grayishBlue text-3xl font-bold mb-3">02</h3>
           <a
             href="#"
-            class="text-veryDarkBlue hover:text-softRed text-lg font-extrabold mt-4"
+            class="text-veryDarkBlue hover:text-softRed text-lg font-extrabold"
           >
             Top 10 Laptops of 2022
           </a>
@@ -134,17 +164,17 @@
           </p>
         </div>
       </div>
-      <div class="flex">
+      <div class="flex gap-3">
         <img
           class="w-28"
           src="./images/image-gaming-growth.jpg"
           alt="The Growth of Gaming Image"
         />
         <div class="self-center pl-3 pr-5">
-          <h3 class="text-grayishBlue text-3xl font-bold">03</h3>
+          <h3 class="text-grayishBlue text-3xl font-bold mb-3">03</h3>
           <a
             href="#"
-            class="text-veryDarkBlue hover:text-softRed text-lg font-extrabold mt-4"
+            class="text-veryDarkBlue hover:text-softRed text-lg font-extrabold"
           >
             The Growth of Gaming
           </a>
