@@ -14,9 +14,11 @@
     <title>News homepage</title>
   </head>
   <body class="font-inter px-3 ss:px-0">
-    <header class="container mx-auto flex justify-between mt-8">
+    <header
+      class="container mx-auto flex justify-between mt-8 relative ss:static"
+    >
       <a href="#"><img src="./images/logo.svg" alt="Logo" /></a>
-      <nav>
+      <nav class="absolute right-0 bg-offWhite h-screen w-2/3">
         <div id="mobileMenu" class="ss:hidden">
           <img
             id="openMenu"
@@ -31,7 +33,7 @@
             alt=""
           />
         </div>
-        <ul class="hidden ss:flex">
+        <ul id="navbar" class="hidden ss:flex flex-col">
           <li class="mr-9 text-darkBlue hover:text-softRed">
             <a href="#">Home</a>
           </li>
@@ -64,19 +66,19 @@
         alt=""
       />
       <div
-        class="col-start-1 col-end-3 row-start-2 row-end-3 flex flex-col ss:flex-row"
+        class="col-start-1 col-end-3 row-start-2 row-end-3 flex flex-col ss:flex-row mt-5 mb-12 my-0"
       >
         <h1 class="font-extrabold text-5xl ss:mr-20 text-veryDarkBlue">
           The Bright Future of Web 3.0?
         </h1>
         <div>
-          <p class="text-darkBlue">
+          <p class="text-darkBlue mt-4 ss:mt-0">
             We dive into the next evolution of the web that claims to put the
             power of the platforms back into the hands of the people. But is it
             really fulfilling its promise?
           </p>
           <button
-            class="px-8 py-3 mt-10 tracking-widest uppercase text-offWhite bg-softRed hover:bg-veryDarkBlue"
+            class="px-8 py-3 mt-4 ss:mt-10 tracking-widest uppercase text-offWhite bg-softRed hover:bg-veryDarkBlue"
           >
             Read more
           </button>
@@ -125,8 +127,8 @@
         </div>
       </div>
     </main>
-    <section class="container mt-14 mx-auto ss:flex ss:justify-between">
-      <div class="flex gap-3">
+    <section class="container mt-14 mb-7 mx-auto ss:flex ss:justify-between">
+      <div class="flex gap-3 mt-7 ss:mt-0">
         <img
           class="w-28"
           src="./images/image-retro-pcs.jpg"
@@ -145,7 +147,7 @@
           </p>
         </div>
       </div>
-      <div class="flex gap-3">
+      <div class="flex gap-3 mt-7 ss:mt-0">
         <img
           class="w-28"
           src="./images/image-top-laptops.jpg"
@@ -164,7 +166,7 @@
           </p>
         </div>
       </div>
-      <div class="flex gap-3">
+      <div class="flex gap-3 mt-7 ss:mt-0">
         <img
           class="w-28"
           src="./images/image-gaming-growth.jpg"
