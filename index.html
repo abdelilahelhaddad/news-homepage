@@ -13,12 +13,17 @@
 
     <title>News homepage</title>
   </head>
-  <body class="font-inter px-3 ss:px-0">
+  <body class="font-inter px-3 ss:px-0 overflow-hidden ss:overflow-auto">
     <header
-      class="container mx-auto flex justify-between mt-8 relative ss:static"
+      class="container mx-auto flex justify-between pt-8 relative ss:static"
     >
       <a href="#"><img src="./images/logo.svg" alt="Logo" /></a>
-      <nav class="absolute right-0 bg-offWhite h-screen w-2/3">
+      <div
+        class="absolute w-screen h-screen -mx-3 top-0 bottom-0 right-0 left-0 bg-veryDarkBlue opacity-30"
+      ></div>
+      <nav
+        class="absolute ss:static pl-4 pr-4 pt-8 -mr-4 -mt-8 right-0 ss:right-auto bg-offWhite ss:bg-none h-screen ss:h-auto w-2/3"
+      >
         <div id="mobileMenu" class="ss:hidden">
           <img
             id="openMenu"
@@ -28,22 +33,25 @@
           />
           <img
             id="closeMenu"
-            class="hidden"
+            class="hidden ml-auto"
             src="./images/icon-menu-close.svg"
             alt=""
           />
         </div>
-        <ul id="navbar" class="hidden ss:flex flex-col">
-          <li class="mr-9 text-darkBlue hover:text-softRed">
+        <ul
+          id="navbar"
+          class="hidden ss:flex ss:flex-row flex-col mt-16 ss:mt-0"
+        >
+          <li class="mr-9 mb-4 ss:mb-0 text-darkBlue hover:text-softRed">
             <a href="#">Home</a>
           </li>
-          <li class="mr-9 text-darkBlue hover:text-softRed">
+          <li class="mr-9 mb-4 ss:mb-0 text-darkBlue hover:text-softRed">
             <a href="#">New</a>
           </li>
-          <li class="mr-9 text-darkBlue hover:text-softRed">
+          <li class="mr-9 mb-4 ss:mb-0 text-darkBlue hover:text-softRed">
             <a href="#">Popular</a>
           </li>
-          <li class="mr-9 text-darkBlue hover:text-softRed">
+          <li class="mr-9 mb-4 ss:mb-0 text-darkBlue hover:text-softRed">
             <a href="#">Trending</a>
           </li>
           <li class="text-darkBlue hover:text-softRed">
